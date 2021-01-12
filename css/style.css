@@ -38,7 +38,9 @@ body::-webkit-scrollbar {
 }
 .userinput{
 	padding: 80px 10px;
+	margin: auto;
 	text-align: -webkit-center;
+	text-align: -moz-center;
 }
 .form-control{
 	width: 70%;
