@@ -3,72 +3,153 @@ body, html {
   margin: 0px;
   animation: sab_fadeXslide-effect 1.5s;
 }
-@keyframes sab_fadeXslide-effect {
-  from {transform: translatey(-50%);}
-  to   {transform: translatey(0%);}
-  0%   {opacity: 0%;}
-  100% {opacity: 100%;}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 body::-webkit-scrollbar {
   display: none;
 }
+
 .bg {
   /* The image used */
   background-image: url("../image/background-cgpa-calculator.png");
-
   /* Full height */
   height: 100%;
-
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  margin: 0px;
+  margin: 0px 0px 0px -43px;
   text-align: center;
 }
 
-.clacu-body{
-	background-color: rgba(0, 0, 0, 0.3);
-	width: 65%;
-	height: 500px;
-	margin:40px auto 0px auto;
-	
-	color: white;
-}
-.userinput{
-	padding: 80px 10px;
-	margin: auto;
-	text-align: -webkit-center;
-	text-align: -moz-center;
-}
-.form-control{
-	width: 70%;
-}
-.outputbox{
-	width: 150px;
-	height: 150px;
-	background-color: rgb(17, 180, 2);
-	border-radius: 50px;
-	padding: 25px;
+.clacu-body {
+  background-color: rgba(44, 62, 80, 0.5);
+  width: 65%;
+  height: auto;
+  margin: 40px auto 0px auto;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  color: white;
 }
 
-@media only screen and (max-width: 950px) {
-  .clacu-body{
-	
+.userinput {
+  padding: 80px 10px 10px;
+  margin: auto;
+  text-align: -webkit-center;
+  text-align: -moz-center;
 }
-}
-@media only screen and (max-width: 767px) {
-  .clacu-body{
-	height: 650px;
 
+.form-control {
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+  width: 70%;
 }
+
+.outputboxCGPA {
+  width: 150px;
+  height: 130px;
+  background-color: #00bd3f;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 50px 0 0 50px;
+  padding: 25px;
 }
+
+.outputboxCredit {
+  width: 150px;
+  height: 130px;
+  background-color: #05ac72;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 0 50px 50px 0;
+  padding: 25px;
+}
+
+.outputalign {
+  margin-right: -30px;
+}
+
+.output {
+  margin-left: 5%;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.btn {
+  width: 200px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+  margin: 10px 0px 30px 0px;
+}
+
+@media only screen and (max-width: 627px) {
+  .clacu-body {
+    width: 90%;
+  }
+}
+
 @media only screen and (max-width: 450px) {
-  .clacu-body{
-	width: 90%;
+  .form-control {
+    width: 90%;
+  }
 }
-.form-control{
-	width: 90%;
+
+@media only screen and (max-width: 400px) {
+  .output h2 {
+    font-size: 27px;
+  }
+
+  .output h3 {
+    font-size: 22px;
+  }
+
+  .outputboxCGPA {
+    width: 110px;
+    height: 105px;
+    padding: 20px;
+  }
+
+  .outputboxCredit {
+    width: 113px;
+    height: 105px;
+    padding: 20px 20px 20px 10px;
+  }
 }
+
+@media only screen and (max-width: 300px) {
+  .btn {
+    width: auto;
+  }
+}
+
+@keyframes sab_fadeXslide-effect {
+  from {
+    transform: translatey(-50%);
+  }
+
+  to {
+    transform: translatey(0%);
+  }
+
+  0% {
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
 }
