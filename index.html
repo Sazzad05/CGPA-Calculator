@@ -2,46 +2,63 @@
 <html>
 <head>
 	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-VS-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="image/cgpa-calculator-title-icon.png" rel="icon" type="image/x-icon" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-VS-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="image/cgpa-calculator-title-icon.png" rel="icon" type="image/x-icon" />
 	<title>CGPA Calculator | Sazzad Alam Bhuiyan</title>
 </head>
 <body class="bg">
-	<dir >
+	<dir>
 		<div class="clacu-body">
 			<dir class="container">
 				<div class="userinput">
+					<div class="row output">
+						<div class="col-6 d-flex flex-row-reverse outputalign">
+							<dir class=" outputboxCGPA">
+								<H2>CGPA</H2>
+								<h3 id="outputCGPA">0.00</h3>
+							</dir>
+						</div>
+						<div class="col-6 d-flex flex-row">
+							<dir class=" outputboxCredit">
+								<H2>Credit</H2>
+								<h3 id="outputCredit">0.0</h3>
+							</dir>
+						</div>
+					</div>
 					<div class="form-row">
-	    				<div class="form-group col-md-6">
-	      					<label for="CreditEarned left">Credit Earned</label>
-	      					<input class="form-control CreditEarned" maxlength="3" id="CreditEarned" placeholder="Credit Earned" oninput="lineInput()">
-	    				</div>
-	    				<div class="form-group col-md-6">
-	     				    <label for="CurrnetCGPA left">Currnet CGPA</label>
-	      				   	<input class="form-control CurrnetCGPA" maxlength="4" id="CurrnetCGPA" placeholder="Currnet CGPA" oninput="lineInput()">
-	    				</div>
-	  				</div>
-	  				<div class="form-row">
-	    				<div class="form-group col-md-6">
-	      					<label for="CourseCredit">Course Credit</label>
-	      					<input class="form-control CourseCredit" maxlength="2" id="CourseCredit" placeholder="Course Credit" oninput="lineInput()">
-	    				</div>
-	    				<div class="form-group col-md-6">
-	     				    <label for="EarnedGPA">Earned GPA</label>
-	      				   	<input class="form-control EarnedGPA" maxlength="4" id="EarnedGPA" placeholder="Earned GPA" oninput="lineInput()">
-	    				</div>
-	  				</div>
-	  					<dir class="col-md-12 outputbox align-middle">
-	  						<H1>CGPA</H1> 
-	  						<h2 id="output">0.00</h2>
-
-	  					</dir>
-  				</div>
+						<div class="form-group col-md-6">
+							<label><b>Credit Earned</b></label>
+							<input class="form-control CreditEarned" type="number" placeholder="Credit Earned" oninput="liveInput()">
+						</div>
+						<div class="form-group col-md-6">
+							<label><b>Currnet CGPA</b></label>
+							<input class="form-control CurrnetCGPA" type="number" placeholder="Currnet CGPA" oninput="liveInput()">
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							<label><b>Course/Semester Credit</b></label>
+							<input class="form-control CourseCredit" type="number" placeholder="Course Credit" oninput="liveInput()">
+						</div>
+						<div class="form-group col-md-6">
+							<label><b>Earned GPA</b></label>
+							<input class="form-control EarnedGPA" type="number" placeholder="Earned GPA" oninput="liveInput()">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<button type="button" class="btn btn-info">Add Another Course</button>
+						</div>
+						<div class="col-md-6">
+							<button type="button" class="btn btn-danger" onClick="window.location.reload()">Clear All</button>
+						</div>
+					</div>
+					Developed By <b><a href="https://github.com/Sazzad05" target="_blank" rel="noopener noreferrer">Sazzad Alam Bhuiyan</a>.</b>
+				</div>
 			</dir>
-
 		</div>
 	</dir>
 	<script src="js/script.js"></script>
