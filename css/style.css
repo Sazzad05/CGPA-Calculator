@@ -130,7 +130,10 @@ a:hover {
 button, input {
     overflow: hidden;
   }
-
+.discription{
+  text-align: justify;
+  text-justify: inter-word;
+}
 
 @media only screen and (max-width: 627px) {
   .clacu-body {
