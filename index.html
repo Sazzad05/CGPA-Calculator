@@ -1,66 +1,115 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-VS-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/style.css">
-	<link href="image/cgpa-calculator-title-icon.png" rel="icon" type="image/x-icon" />
+	<link href="image/cgpa-calculator-title-icon.png" rel="icon" type="image/x-icon">
 	<title>CGPA Calculator | Sazzad Alam Bhuiyan</title>
 </head>
+
 <body class="bg">
-	<dir>
-		<div class="clacu-body">
-			<dir class="container">
-				<div class="userinput">
-					<div class="row output">
-						<div class="col-6 d-flex flex-row-reverse outputalign">
-							<dir class=" outputboxCGPA">
-								<H2>CGPA</H2>
-								<h3 id="outputCGPA">0.00</h3>
-							</dir>
-						</div>
-						<div class="col-6 d-flex flex-row">
-							<dir class=" outputboxCredit">
-								<H2>Credit</H2>
-								<h3 id="outputCredit">0.0</h3>
-							</dir>
-						</div>
+	<div class="clacu-body">
+		<dir class="container">
+			<div class="userinput">
+				<img class="img-fluid" src="image/cgpa-calculator-logo.png" alt="">
+				<h6>CGPA Calculator calculates the total CGPA of an individual using the universal calculation method. Here, the total credit and CGPA earned till present is entered in the Credits Earned and Current CGPA tabs respectively.
+				The credits undertaken in the current semester/course and the acquired GPA in the course/s is entered in the Course/Semester Credit and Earned GPA tabs respectively and the results of the total CGPA is shown instantly above the calculator. If the user retakes a course to improve the result of that particular course, the retake feature helps edit the course's previous data and input the recent data to provide an accurate and updated CGPA calculation.
+				<br> </h6>
+				<div class="row output">
+					<div class="col-6 d-flex flex-row-reverse outputalign">
+						<dir class=" outputboxCGPA">
+							<H2>CGPA</H2>
+							<h3 id="outputCGPA">0.00</h3>
+						</dir>
 					</div>
-					<div class="form-row">
-						<div class="form-group col-md-6">
-							<label><b>Credit Earned</b></label>
-							<input class="form-control CreditEarned" type="number" placeholder="Credit Earned" oninput="liveInput()">
-						</div>
-						<div class="form-group col-md-6">
-							<label><b>Currnet CGPA</b></label>
-							<input class="form-control CurrnetCGPA" type="number" placeholder="Currnet CGPA" oninput="liveInput()">
-						</div>
+					<div class="col-6 d-flex flex-row">
+						<dir class=" outputboxCredit">
+							<H2>Credit</H2>
+							<h3 id="outputCredit">0.0</h3>
+						</dir>
 					</div>
-					<div class="form-row">
-						<div class="form-group col-md-6">
-							<label><b>Course/Semester Credit</b></label>
-							<input class="form-control CourseCredit" type="number" placeholder="Course Credit" oninput="liveInput()">
-						</div>
-						<div class="form-group col-md-6">
-							<label><b>Earned GPA</b></label>
-							<input class="form-control EarnedGPA" type="number" placeholder="Earned GPA" oninput="liveInput()">
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-6">
-							<button type="button" class="btn btn-info">Add Another Course</button>
-						</div>
-						<div class="col-md-6">
-							<button type="button" class="btn btn-danger" onClick="window.location.reload()">Clear All</button>
-						</div>
-					</div>
-					Developed By <b><a href="https://github.com/Sazzad05" target="_blank" rel="noopener noreferrer">Sazzad Alam Bhuiyan</a>.</b>
 				</div>
-			</dir>
+				<div class="form-row">
+					<div class="form-group col-md-6">
+						<label><b>Credit Earned</b></label>
+						<input class="form-control CreditEarned" type="number" placeholder="Credit Earned" oninput="liveInput()">
+					</div>
+					<div class="form-group col-md-6">
+						<label><b>Currnet CGPA</b></label>
+						<input class="form-control CurrnetCGPA" type="number" placeholder="Currnet CGPA" oninput="liveInput()">
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="form-group col-md-6">
+						<label><b>Semester/Course Credit</b></label>
+						<input class="form-control CourseCredit" type="number" placeholder="Course Credit" oninput="liveInput()">
+					</div>
+					<div class="form-group col-md-6">
+						<label><b>Earned GPA</b></label>
+						<input class="form-control EarnedGPA" type="number" placeholder="Earned GPA" oninput="liveInput()">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<button type="button" class="btn btn-info" onclick="updateInputBox()">Add Another Course</button>
+					</div>
+					<div class="col-md-6">
+						<button type="button" class="btn btn-bg" data-toggle="modal" data-target="#retake" onclick="updateInputBox()">Add a Retake</button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<button type="button" class="btn btn-danger clearbtn" onClick="window.location.reload()">Clear All</button>
+					</div>
+				</div>
+				<h6>**Note that: The calculation may be subjective to inaccuracy due to human error as calculations entered by the user are rounded to 2 decimal point.</h6>
+				Developed By <b><a href="https://github.com/Sazzad05" target="_blank" rel="noopener noreferrer">Sazzad Alam Bhuiyan</a>.</b>
+			</div>
+		</dir>
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="retake" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content modelcontent">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Add a Retake</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="form-row d-flex justify-content-center">
+						<div class="form-group col-xm-6">
+							<label><b>Course Credit</b></label>
+							<input class="form-control retakecredit" type="number" placeholder="Course Credit" oninput="liveInput()">
+						</div>
+						<div class="form-group col-xm-6">
+							<label><b>Previous GPA</b></label>
+							<input class="form-control oldgpa" type="number" placeholder="Previous GPA" oninput="liveInput()">
+						</div>
+					</div>
+					<div class="form-row d-flex justify-content-center">
+						<div class="form-group col-12">
+							<label><b>Updated GPA</b></label>
+							<input class="form-control newgpa" type="number" placeholder="Updated GPA" oninput="liveInput()">
+						</div>
+
+					</div>
+				</div>
+				<div class="modal-footer d-flex justify-content-center">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-success" data-dismiss="modal" onclick="addRetake()">Confirm</button>
+				</div>
+			</div>
 		</div>
-	</dir>
+	</div>
 	<script src="js/script.js"></script>
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 </body>
+
 </html>

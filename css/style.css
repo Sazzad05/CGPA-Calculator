@@ -1,7 +1,7 @@
 body, html {
   height: 100%;
   margin: 0px;
-  animation: sab_fadeXslide-effect 1.5s;
+  animation: sab_fadeXslide-effect 1.8s;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -30,7 +30,6 @@ body::-webkit-scrollbar {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  margin: 0px 0px 0px -43px;
   text-align: center;
 }
 
@@ -38,20 +37,32 @@ body::-webkit-scrollbar {
   background-color: rgba(44, 62, 80, 0.5);
   width: 65%;
   height: auto;
-  margin: 40px auto 0px auto;
+  margin: 40px auto 30px auto;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   color: white;
 }
 
 .userinput {
-  padding: 80px 10px 10px;
+  padding: 40px 10px 10px;
   margin: auto;
   text-align: -webkit-center;
   text-align: -moz-center;
 }
-
 .form-control {
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+  margin: auto;
+
+ }
+ img{
+  padding: 30px 0px;
+ }
+ h6{
+  font-size: 15px;
+ }
+ .newgpa{
+  width: 265px
+ }
+.clacu-body .form-control {
   width: 70%;
 }
 
@@ -90,20 +101,58 @@ a:hover {
   text-decoration: none;
 }
 
-.btn {
+.clacu-body .btn {
   width: 200px;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+  margin-top: 10px;
+}
+.btn {
+  width: 130px;
+}
+.btn-bg{
+  background-color: #6b9fc7;
+  color: white;
+  border: none;
+}
+.btn-bg:hover {
+  background-color: #5781a1;
+  color: white;
+}
+.clearbtn{
   margin: 10px 0px 30px 0px;
 }
+
+.modelcontent{
+  background-color: rgb(255,255,255,0.6);
+  /* align-items: center; */
+}
+
+button, input {
+    overflow: hidden;
+  }
+
 
 @media only screen and (max-width: 627px) {
   .clacu-body {
     width: 90%;
   }
+  h6{
+    font-size: 13px;
+  }
+
+}
+@media (max-width: 576px) {
+  .modal-dialog {
+    max-width: 350px;
+    margin: 1.75rem auto;
+  }
+  .retakecredit, .oldgpa{
+  width: 130px;
+}
 }
 
 @media only screen and (max-width: 450px) {
-  .form-control {
+  .clacu-body .form-control {
     width: 90%;
   }
 }
@@ -128,17 +177,43 @@ a:hover {
     height: 105px;
     padding: 20px 20px 20px 10px;
   }
+  .modal-dialog {
+    max-width: 300px;
+    margin: 1.75rem auto;
+  }
+  .retakecredit, .oldgpa{
+  width: 265px;
+}
+}
+
+@media (max-width: 330px) {
+  .modal-dialog {
+    max-width: 280px;
+    margin: 1.75rem auto;
+  }
+  .retakecredit, .oldgpa{
+  width: 250px;
+}
+.btn {
+  width: 140px;
+  padding: 6px 6px;
+}
+h6{
+  font-size: 12px;
+}
+
 }
 
 @media only screen and (max-width: 300px) {
   .btn {
     width: auto;
+    padding: 6px 12px
   }
 }
 
 @keyframes sab_fadeXslide-effect {
   from {
-    transform: translatey(-50%);
+    transform: translatey(-80%);
   }
 
   to {
