@@ -1,4 +1,4 @@
-# CGPA calculator By Sazzad Alam Bhuiyan
+# CGPA Calculator By Sazzad Alam Bhuiyan
 This is a cgpa calculator/estimator, made with JavaScript. It calculates the total CGPA of an individual using the universal calculation method. It can also be used as an estimator to plan grades ahead. One can easily calculate how much they need to earn in upcoming terms to acquire a certain cumulative GPA. This way one can have a better planning for their degree.
 
 ![CGPA Calcultor By Sazzad Alam Bhuiyan](https://user-images.githubusercontent.com/60057234/111517024-cecb6f80-877e-11eb-9bf6-e0d2167249cd.gif)
